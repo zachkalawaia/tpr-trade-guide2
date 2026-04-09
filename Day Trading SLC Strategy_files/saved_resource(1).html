@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://web-sandbox.oaiusercontent.com/? -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>TPR Trade Guide</title>
+  <meta name="theme-color" content="#0f172a">
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #111827;
+      --card-2: #0f172a;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --green: #22c55e;
+      --red: #ef4444;
+      --yellow: #f59e0b;
+      --blue: #38bdf8;
+      --border: #1f2937;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #020617 0%, #0b1220 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+    }
+    h1 {
+      font-size: 1.7rem;
+      margin: 0 0 6px;
+    }
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 16px;
+      line-height: 1.45;
+    }
+    .card {
+      background: rgba(17,24,39,.9);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 14px;
+      margin-bottom: 14px;
+      box-shadow: 0 12px 28px rgba(0,0,0,.25);
+      backdrop-filter: blur(6px);
+    }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .tab {
+      flex: 1;
+      border: 1px solid var(--border);
+      background: var(--card-2);
+      color: var(--text);
+      border-radius: 14px;
+      padding: 12px;
+      font-size: 0.98rem;
+      cursor: pointer;
+    }
+    .tab.active {
+      background: #172554;
+      border-color: #1d4ed8;
+    }
+    textarea, input {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: #0f172a;
+      color: var(--text);
+      padding: 12px 14px;
+      font-size: 1rem;
+      outline: none;
+    }
+    textarea { min-height: 110px; resize: vertical; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .metric {
+      background: #0f172a;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 12px;
+    }
+    .metric .label {
+      color: var(--muted);
+      font-size: .86rem;
+      margin-bottom: 4px;
+    }
+    .metric .value {
+      font-size: 1.18rem;
+      font-weight: 700;
+    }
+    .section-title {
+      font-size: 1.02rem;
+      margin: 2px 0 10px;
+      font-weight: 700;
+    }
+    .steps {
+      padding-left: 20px;
+      margin: 0;
+      line-height: 1.6;
+    }
+    .steps li { margin-bottom: 8px; }
+    .pill {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: .95rem;
+      margin-bottom: 10px;
+    }
+    .buy { background: rgba(34,197,94,.15); color: #86efac; border: 1px solid rgba(34,197,94,.35); }
+    .skip { background: rgba(239,68,68,.15); color: #fca5a5; border: 1px solid rgba(239,68,68,.35); }
+    .check {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .check:last-child { border-bottom: none; }
+    .ok { color: #86efac; }
+    .warn { color: #fcd34d; }
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    button {
+      border: 0;
+      border-radius: 14px;
+      padding: 13px 15px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .primary { background: var(--green); color: #052e16; }
+    .secondary { background: #1f2937; color: var(--text); border: 1px solid var(--border); }
+    .danger { background: #7f1d1d; color: #fee2e2; }
+    .footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.45;
+    }
+    .small {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+    .hidden { display: none; }
+    @media (max-width: 560px) {
+      .grid, .metric-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 1.45rem; }
+      .wrap { padding-bottom: 80px; }
+    }
+  </style>
+<style>html,body,#root{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin:0;padding:0}html,body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Helvetica Neue,Arial,sans-serif!important}button,input,textarea,select{font-family:inherit}html{background-color:#fff}html.dark{background-color:#212121}html.mobileSkybridge.dark{background-color:#000}@supports (font: -apple-system-body){html.mobileSkybridge{font:-apple-system-body}}html.desktopSkybridge.dark{background-color:#1e1e1e}html.androidSkybridge,html.androidSkybridge body,html.androidSkybridge *{-webkit-tap-highlight-color:rgba(255,255,255,0)}html.androidSkybridge *::selection,html.androidSkybridge *::-moz-selection{background:#fff0;color:inherit}</style></head>
+<body>
+  <div class="wrap">
+    <h1>TPR Trade Guide</h1>
+    <div class="subtitle">Paste a strategy alert or enter the numbers manually. This turns it into a simple phone-friendly trade plan for Robinhood.</div>
+
+    <div class="card">
+      <div class="tabs">
+        <button class="tab active" id="tab-paste" type="button">Paste Alert</button>
+        <button class="tab" id="tab-manual" type="button">Manual Entry</button>
+      </div>
+
+      <div id="paste-pane">
+        <div class="small" style="margin-bottom:8px;">Example format</div>
+        <div class="small" style="margin-bottom:10px;">BUY SETUP | XYZ | Buy $86.40 | Entry 4.80 | Stop 4.58 | Target 5.24 | RR 2.00 | Risk $3.96 | Target Profit $7.92</div>
+        <textarea id="alertText">BUY SETUP | XYZ | Buy $86.40 | Entry 4.80 | Stop 4.58 | Target 5.24 | RR 2.00 | Risk $3.96 | Target Profit $7.92</textarea>
+      </div>
+
+      <div id="manual-pane" class="hidden">
+        <div class="grid">
+          <div><input id="ticker" placeholder="Ticker" value="XYZ"></div>
+          <div><input id="buyDollars" type="number" step="0.01" value="86.40" placeholder="Buy dollars"></div>
+          <div><input id="entry" type="number" step="0.01" value="4.80" placeholder="Entry"></div>
+          <div><input id="stop" type="number" step="0.01" value="4.58" placeholder="Stop"></div>
+          <div><input id="target" type="number" step="0.01" value="5.24" placeholder="Target"></div>
+          <div><input id="rr" type="number" step="0.01" value="2.00" placeholder="R/R"></div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:12px;">
+        <button class="primary" id="buildBtn" type="button">Build Trade Plan</button>
+        <button class="secondary" id="exampleBtn" type="button">Load Example</button>
+        <button class="danger" id="clearBtn" type="button">Clear</button>
+      </div>
+    </div>
+
+    <div class="card" id="resultCard">
+      <div id="signalBadge" class="pill buy">BUY SETUP TO REVIEW</div>
+      <div class="metric-grid">
+        <div class="metric"><div class="label">Ticker</div><div class="value" id="mTicker">XYZ</div></div>
+        <div class="metric"><div class="label">Buy Amount</div><div class="value" id="mBuy">$86.40</div></div>
+        <div class="metric"><div class="label">Entry</div><div class="value" id="mEntry">4.80</div></div>
+        <div class="metric"><div class="label">Stop</div><div class="value" id="mStop">4.58</div></div>
+        <div class="metric"><div class="label">Target</div><div class="value" id="mTarget">5.24</div></div>
+        <div class="metric"><div class="label">R/R</div><div class="value" id="mRR">2.00</div></div>
+        <div class="metric"><div class="label">Estimated Max Loss</div><div class="value" id="mRisk">$3.96</div></div>
+        <div class="metric"><div class="label">Estimated Target Profit</div><div class="value" id="mProfit">$7.92</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">What to do in Robinhood</div>
+      <ol class="steps" id="stepsList"><li>Open Robinhood and search XYZ.</li><li>Tap Buy and switch to dollars.</li><li>Enter $86.40.</li><li>Only take the trade if the live price is close to 4.80.</li><li>Use 4.58 as your stop level.</li><li>Plan to take profit near 5.24.</li><li>Do not add more if it starts going against you.</li><li>Stick to this one setup until it resolves.</li></ol>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Quick checks</div>
+      <div id="checks"><div class="check"><span class="ok">✅</span><span>Reward/Risk is at least 2.0</span></div><div class="check"><span class="ok">✅</span><span>Estimated risk is no more than $4.00</span></div><div class="check"><span class="ok">✅</span><span>Stop is below entry</span></div><div class="check"><span class="ok">✅</span><span>Target is above entry</span></div><div class="check"><span class="ok">✅</span><span>Buy amount is at least $10</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Copyable summary</div>
+      <textarea id="summaryBox" readonly=""></textarea>
+      <div class="btn-row" style="margin-top:10px;">
+        <button class="primary" id="copyBtn" type="button">Copy Summary</button>
+        <button class="secondary" id="shareBtn" type="button">Share</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      Best use: run your strategy, paste the alert here, and follow the plan on your phone.
+      This is a guide for manual execution, not an automatic broker connection.
+    </div>
+  </div>
+
+  <script>
+    const tabPaste = document.getElementById('tab-paste');
+    const tabManual = document.getElementById('tab-manual');
+    const pastePane = document.getElementById('paste-pane');
+    const manualPane = document.getElementById('manual-pane');
+
+    function setTab(mode) {
+      const paste = mode === 'paste';
+      tabPaste.classList.toggle('active', paste);
+      tabManual.classList.toggle('active', !paste);
+      pastePane.classList.toggle('hidden', !paste);
+      manualPane.classList.toggle('hidden', paste);
+      localStorage.setItem('tpr_mode', mode);
+    }
+
+    tabPaste.addEventListener('click', () => setTab('paste'));
+    tabManual.addEventListener('click', () => setTab('manual'));
+
+    function parseAlert(text) {
+      const pattern = /BUY SETUP \| ([A-Z.\-]+) \| Buy \$([0-9]+(?:\.[0-9]+)?) \| Entry ([0-9]+(?:\.[0-9]+)?) \| Stop ([0-9]+(?:\.[0-9]+)?) \| Target ([0-9]+(?:\.[0-9]+)?) \| RR ([0-9]+(?:\.[0-9]+)?) \| Risk \$([0-9]+(?:\.[0-9]+)?) \| Target Profit \$([0-9]+(?:\.[0-9]+)?)/i;
+      const m = text.trim().match(pattern);
+      if (!m) return null;
+      return {
+        ticker: m[1].toUpperCase(),
+        buyDollars: parseFloat(m[2]),
+        entry: parseFloat(m[3]),
+        stop: parseFloat(m[4]),
+        target: parseFloat(m[5]),
+        rr: parseFloat(m[6]),
+        riskDollars: parseFloat(m[7]),
+        profitDollars: parseFloat(m[8]),
+      };
+    }
+
+    function fromManual() {
+      const ticker = (document.getElementById('ticker').value || 'XYZ').toUpperCase();
+      const buyDollars = parseFloat(document.getElementById('buyDollars').value || 0);
+      const entry = parseFloat(document.getElementById('entry').value || 0);
+      const stop = parseFloat(document.getElementById('stop').value || 0);
+      const target = parseFloat(document.getElementById('target').value || 0);
+      let rr = parseFloat(document.getElementById('rr').value || 0);
+
+      const shares = entry > 0 ? buyDollars / entry : 0;
+      const riskDollars = shares * Math.max(entry - stop, 0);
+      const profitDollars = shares * Math.max(target - entry, 0);
+      if (!rr && entry > stop) rr = (target - entry) / (entry - stop);
+
+      return { ticker, buyDollars, entry, stop, target, rr, riskDollars, profitDollars };
+    }
+
+    function checks(sig) {
+      return [
+        { label: 'Reward/Risk is at least 2.0', ok: sig.rr >= 2.0 },
+        { label: 'Estimated risk is no more than $4.00', ok: sig.riskDollars <= 4.0 },
+        { label: 'Stop is below entry', ok: sig.stop < sig.entry },
+        { label: 'Target is above entry', ok: sig.target > sig.entry },
+        { label: 'Buy amount is at least $10', ok: sig.buyDollars >= 10.0 }
+      ];
+    }
+
+    function updateUI(sig) {
+      document.getElementById('mTicker').textContent = sig.ticker;
+      document.getElementById('mBuy').textContent = `$${sig.buyDollars.toFixed(2)}`;
+      document.getElementById('mEntry').textContent = sig.entry.toFixed(2);
+      document.getElementById('mStop').textContent = sig.stop.toFixed(2);
+      document.getElementById('mTarget').textContent = sig.target.toFixed(2);
+      document.getElementById('mRR').textContent = sig.rr.toFixed(2);
+      document.getElementById('mRisk').textContent = `$${sig.riskDollars.toFixed(2)}`;
+      document.getElementById('mProfit').textContent = `$${sig.profitDollars.toFixed(2)}`;
+
+      const okToReview = sig.stop < sig.entry && sig.target > sig.entry && sig.rr >= 2.0;
+      const badge = document.getElementById('signalBadge');
+      badge.textContent = okToReview ? 'BUY SETUP TO REVIEW' : 'SKIP OR FIX SETUP';
+      badge.className = 'pill ' + (okToReview ? 'buy' : 'skip');
+
+      const steps = [
+        `Open Robinhood and search ${sig.ticker}.`,
+        `Tap Buy and switch to dollars.`,
+        `Enter $${sig.buyDollars.toFixed(2)}.`,
+        `Only take the trade if the live price is close to ${sig.entry.toFixed(2)}.`,
+        `Use ${sig.stop.toFixed(2)} as your stop level.`,
+        `Plan to take profit near ${sig.target.toFixed(2)}.`,
+        `Do not add more if it starts going against you.`,
+        `Stick to this one setup until it resolves.`
+      ];
+      const list = document.getElementById('stepsList');
+      list.innerHTML = '';
+      steps.forEach(s => {
+        const li = document.createElement('li');
+        li.textContent = s;
+        list.appendChild(li);
+      });
+
+      const checksEl = document.getElementById('checks');
+      checksEl.innerHTML = '';
+      checks(sig).forEach(c => {
+        const row = document.createElement('div');
+        row.className = 'check';
+        row.innerHTML = `<span class="${c.ok ? 'ok' : 'warn'}">${c.ok ? '✅' : '⚠️'}</span><span>${c.label}</span>`;
+        checksEl.appendChild(row);
+      });
+
+      const summary = `Ticker: ${sig.ticker}
+Buy: $${sig.buyDollars.toFixed(2)}
+Entry: ${sig.entry.toFixed(2)}
+Stop: ${sig.stop.toFixed(2)}
+Target: ${sig.target.toFixed(2)}
+R/R: ${sig.rr.toFixed(2)}
+Estimated max loss: $${sig.riskDollars.toFixed(2)}
+Estimated target profit: $${sig.profitDollars.toFixed(2)}`;
+      document.getElementById('summaryBox').value = summary;
+      localStorage.setItem('tpr_last_summary', summary);
+    }
+
+    function buildPlan() {
+      const mode = localStorage.getItem('tpr_mode') || 'paste';
+      let sig = null;
+      if (mode === 'paste') {
+        const txt = document.getElementById('alertText').value;
+        sig = parseAlert(txt);
+        if (!sig) {
+          alert('Could not parse the alert. Use the BUY SETUP format or switch to Manual Entry.');
+          return;
+        }
+      } else {
+        sig = fromManual();
+      }
+      updateUI(sig);
+    }
+
+    document.getElementById('buildBtn').addEventListener('click', buildPlan);
+    document.getElementById('exampleBtn').addEventListener('click', () => {
+      setTab('paste');
+      document.getElementById('alertText').value = 'BUY SETUP | XYZ | Buy $86.40 | Entry 4.80 | Stop 4.58 | Target 5.24 | RR 2.00 | Risk $3.96 | Target Profit $7.92';
+      buildPlan();
+    });
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      document.getElementById('alertText').value = '';
+      document.getElementById('ticker').value = '';
+      document.getElementById('buyDollars').value = '';
+      document.getElementById('entry').value = '';
+      document.getElementById('stop').value = '';
+      document.getElementById('target').value = '';
+      document.getElementById('rr').value = '';
+      document.getElementById('summaryBox').value = '';
+    });
+
+    document.getElementById('copyBtn').addEventListener('click', async () => {
+      const txt = document.getElementById('summaryBox').value;
+      if (!txt) return;
+      try {
+        await navigator.clipboard.writeText(txt);
+        alert('Summary copied');
+      } catch {
+        alert('Copy failed');
+      }
+    });
+
+    document.getElementById('shareBtn').addEventListener('click', async () => {
+      const txt = document.getElementById('summaryBox').value;
+      if (!txt) return;
+      if (navigator.share) {
+        try {
+          await navigator.share({ title: 'TPR Trade Plan', text: txt });
+        } catch {}
+      } else {
+        alert('Sharing is not available on this device. Use Copy Summary instead.');
+      }
+    });
+
+    // restore mode and summary
+    setTab(localStorage.getItem('tpr_mode') || 'paste');
+    const lastSummary = localStorage.getItem('tpr_last_summary');
+    if (lastSummary) document.getElementById('summaryBox').value = lastSummary;
+    buildPlan();
+  </script>
+
+</body></html>
